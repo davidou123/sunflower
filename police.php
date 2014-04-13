@@ -31,7 +31,7 @@ function cURL($url, $header=NULL, $cookie=NULL, $post=NULL)
 }
   
 function curl_fb($url){
-    //¿é¤J­n¥Î¨Óµn¤Jªºe-mail»P±K½X
+    //è¼¸å…¥è¦ç”¨ä¾†ç™»å…¥çš„e-mailèˆ‡å¯†ç¢¼
     $EMAIL = "";
     $PASSWORD = "";
  
@@ -49,19 +49,19 @@ function curl_fb($url){
     return cURL($url,null,$cookie,null);
 }
  
-//­n§ì¨úªººô­¶Åã¥Ü¥X¨Ó
+//è¦æŠ“å–çš„ç¶²é é¡¯ç¤ºå‡ºä¾†
 $url = 'https://www.facebook.com/pages/%E7%84%A1%E9%99%90%E6%9C%9F%E6%94%AF%E6%8C%81%E6%96%B9%E4%BB%B0%E5%AF%A7%E6%94%AF%E6%8C%81%E8%AD%A6%E5%AF%9F/310212962461242?fref=ts';
 $lines_string= curl_fb($url);
- eregi("cg\"><div class=\"fsm fwn fcg\">(.*) ¤H»¡Æg", $lines_string, $head);
+ eregi("cg\"><div class=\"fsm fwn fcg\">(.*) äººèªªè®š", $lines_string, $head);
 
  $url2 = 'http://www.facebook.com/pages/%E6%96%B9%E4%BB%B0%E5%AF%A7%E5%8A%A0%E6%B2%B9/1422073471381129?ref=stream';
 $lines_string2= curl_fb($url2);
- eregi("cg\"><div class=\"fsm fwn fcg\">(.*) ¤H»¡Æg", $lines_string2, $head2);
+ eregi("cg\"><div class=\"fsm fwn fcg\">(.*) äººèªªè®š", $lines_string2, $head2);
  
 
-echo "µL­­´Á¤ä«ù¤è¥õ¹ç¡B¤ä«ùÄµ¹î". $head[1];
+echo "ç„¡é™æœŸæ”¯æŒæ–¹ä»°å¯§ã€æ”¯æŒè­¦å¯Ÿ". $head[1];
 echo "<br>";
-echo "¤è¥õ¹ç¥[ªo".$head2[1];
+echo "æ–¹ä»°å¯§åŠ æ²¹".$head2[1];
 ?>
 
 <html>
@@ -81,7 +81,7 @@ window.setTimeout("refresh()", 1000)
 }
 
 </script>
-<title>¤è¥õ¹ç±M¥ÎBOT</title>
+<title>æ–¹ä»°å¯§å°ˆç”¨BOT</title>
 </meta></head>
 <body onload="refresh()">
 
